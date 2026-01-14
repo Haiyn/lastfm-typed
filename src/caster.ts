@@ -28,7 +28,6 @@ export function toArray(arr:any) {
 }
 
 export function convertMeta(meta:any) {
-	console.log(meta)
 	for (let key of ["page", "perPage", "total", "totalPages", "from", "to", "index", "accepted", "ignored"]) {
 		if (meta.hasOwnProperty(key)) {
 			meta[key] = toInt(meta[key]); // eslint-disable-line
