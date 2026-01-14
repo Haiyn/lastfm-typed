@@ -82,3 +82,16 @@ const album = await lastfm.album.getInfo(lastfm.helper.AlbumFromName("KITANO REM
 ```
 
 There are also some helper methods that add some basic functionality. These helper methods are documented in the [documentation website.](https://yayuyokita.no/lastfm-typed/)
+
+## Development Setup
+
+1. Clone the repository
+2. Run `yarn install` to install dependencies.
+3. You are ready to start development.
+
+To run the tests (recommended to test your changes):
+1. Configure your test environment by setting the `LASTFM_API_KEY`, `LASTFM_API_SECRET` and `TEST_USERNAME` environment variables or by copying `tests/config.dist.json` and adjusting the values.
+   1. `LASTFM_API_KEY` and `LASTFM_API_SECRET` should be set to a valid Last.FM API key and secret.
+   2. `TEST_USERNAME` should be set to a valid Last.FM username for testing user-related endpoints.
+2. Run `yarn test` to run all tests.
+   1. If you are testing with an IDE integration: Run `yarn preparetest` to build the project after every code change in the `src` folder.
